@@ -1,4 +1,4 @@
-const path = require("path");
+
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
+        test: /\.(svg|png|jpe?g|gif)$/,
         use: {
           loader: "file-loader",
           options: {
@@ -21,6 +21,18 @@ module.exports = {
             outputPath: "imgs"
           }
         }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ]
   }
