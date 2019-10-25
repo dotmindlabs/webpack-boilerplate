@@ -21,5 +21,8 @@ https://medium.com/js-dojo/how-to-configure-webpack-4-with-vuejs-a-complete-guid
 Babel and Webpack 3 ES2015-ES2017
 https://www.youtube.com/watch?v=iWUR04B42Hc
 
+Webpack plugins
+https://webpack.js.org/plugins
+
 
 https://github.com/Colt/webpack-demo-app.git
