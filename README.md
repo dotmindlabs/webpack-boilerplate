@@ -24,5 +24,15 @@ https://www.youtube.com/watch?v=iWUR04B42Hc
 Webpack plugins
 https://webpack.js.org/plugins
 
+https://www.freecodecamp.org/news/a-complete-react-boilerplate-tutorial-from-zero-to-hero-20023e086c4a/
 
 https://github.com/Colt/webpack-demo-app.git
+
+
+
+
+Babel
+-----
+
+npm install @babel/cli @babel/core @babel/node @babel/preset-env @babel/register babel-loader --save-dev
+npm install @babel/preset-react

@@ -2,6 +2,8 @@ const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+//const register = require("@babel/register")
+
 
 module.exports = merge(common, {
   mode: "development",
@@ -17,6 +19,16 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
         test: /\.scss$/,
         use: [
           "style-loader", //3. Inject styles into DOM
@@ -25,5 +37,7 @@ module.exports = merge(common, {
         ]
       }
     ]
-  }
+  },
+  watch: true,           // Webpack Hot reload, watch for changes in any of the resolved files
+  devtool: 'source-map'  // Development Tools (Map Errors To Source File)
 });
